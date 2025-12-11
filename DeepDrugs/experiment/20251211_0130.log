@@ -1,0 +1,365 @@
+nohup: ignoring input
+/nvme1/xingaoj/anaconda3/envs/synergy1/lib/python3.9/site-packages/requests/__init__.py:86: RequestsDependencyWarning: Unable to find acceptable character detection dependency (chardet or charset_normalizer).
+  warnings.warn(
+Disabling PyTorch because PyTorch >= 2.1 is required but found 1.13.1+cu116
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+Environment info:
+------------------------------------------------------------
+sys.platform: linux
+Python: 3.9.23 (main, Jun  5 2025, 13:40:20) [GCC 11.2.0]
+CUDA available: True
+GPU 0,1,2,3,4,5,6,7: NVIDIA A100-SXM4-40GB
+CUDA_HOME: /usr/local/cuda-11.7
+NVCC: Cuda compilation tools, release 11.7, V11.7.99
+GCC: gcc (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0
+PyTorch: 1.13.1+cu116
+PyTorch compiling details: PyTorch built with:
+  - GCC 9.3
+  - C++ Version: 201402
+  - Intel(R) Math Kernel Library Version 2020.0.0 Product Build 20191122 for Intel(R) 64 architecture applications
+  - Intel(R) MKL-DNN v2.6.0 (Git Hash 52b5f107dd9cf10910aaa19cb47f3abf9b349815)
+  - OpenMP 201511 (a.k.a. OpenMP 4.5)
+  - LAPACK is enabled (usually provided by MKL)
+  - NNPACK is enabled
+  - CPU capability usage: AVX2
+  - CUDA Runtime 11.6
+  - NVCC architecture flags: -gencode;arch=compute_37,code=sm_37;-gencode;arch=compute_50,code=sm_50;-gencode;arch=compute_60,code=sm_60;-gencode;arch=compute_70,code=sm_70;-gencode;arch=compute_75,code=sm_75;-gencode;arch=compute_80,code=sm_80;-gencode;arch=compute_86,code=sm_86
+  - CuDNN 8.3.2  (built against CUDA 11.5)
+  - Magma 2.6.1
+  - Build settings: BLAS_INFO=mkl, BUILD_TYPE=Release, CUDA_VERSION=11.6, CUDNN_VERSION=8.3.2, CXX_COMPILER=/opt/rh/devtoolset-9/root/usr/bin/c++, CXX_FLAGS= -fabi-version=11 -Wno-deprecated -fvisibility-inlines-hidden -DUSE_PTHREADPOOL -fopenmp -DNDEBUG -DUSE_KINETO -DUSE_FBGEMM -DUSE_QNNPACK -DUSE_PYTORCH_QNNPACK -DUSE_XNNPACK -DSYMBOLICATE_MOBILE_DEBUG_HANDLE -DEDGE_PROFILER_USE_KINETO -O2 -fPIC -Wno-narrowing -Wall -Wextra -Werror=return-type -Werror=non-virtual-dtor -Wno-missing-field-initializers -Wno-type-limits -Wno-array-bounds -Wno-unknown-pragmas -Wunused-local-typedefs -Wno-unused-parameter -Wno-unused-function -Wno-unused-result -Wno-strict-overflow -Wno-strict-aliasing -Wno-error=deprecated-declarations -Wno-stringop-overflow -Wno-psabi -Wno-error=pedantic -Wno-error=redundant-decls -Wno-error=old-style-cast -fdiagnostics-color=always -faligned-new -Wno-unused-but-set-variable -Wno-maybe-uninitialized -fno-math-errno -fno-trapping-math -Werror=format -Werror=cast-function-type -Wno-stringop-overflow, LAPACK_INFO=mkl, PERF_WITH_AVX=1, PERF_WITH_AVX2=1, PERF_WITH_AVX512=1, TORCH_VERSION=1.13.1, USE_CUDA=ON, USE_CUDNN=ON, USE_EXCEPTION_PTR=1, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_MKL=ON, USE_MKLDNN=ON, USE_MPI=OFF, USE_NCCL=ON, USE_NNPACK=ON, USE_OPENMP=ON, USE_ROCM=OFF, 
+
+TorchVision: 0.14.1+cu116
+OpenCV: 4.12.0
+MMCV: 1.5.0
+MMCV Compiler: GCC 11.4
+MMCV CUDA Compiler: 11.7
+------------------------------------------------------------
+
+
+--------args----------
+seed: 42
+device: cuda:0
+batch_size: 128
+lr: 5e-05
+epochs: 500
+patience: 50
+resume_from: None
+mode: train
+omic: exp,mut,cn
+workdir: /nvme1/xingaoj/deepsyn
+nfold: 0
+saved_model: ./saved_model/best_model.pth
+
+
+Pre-processed data found: /nvme1/xingaoj/deepsyn/data/processed/0_fold_train_norm.pt, loading ...
+Pre-processed data found: /nvme1/xingaoj/deepsyn/data/processed/0_fold_test_norm.pt, loading ...
+Pre-processed data found: /nvme1/xingaoj/deepsyn/data/processed/0_fold_test_norm.pt, loading ...
+train data:30080
+Valid data:7680
+Test data:7680
+0_Fold_Training is starting. Start_time:20251211_0130
+For metric mse, the lower the better
+Epoch 0, Train_loss 302.317753, Valid_loss 277.228577
+Epoch 1, Train_loss 270.222191, Valid_loss 275.760284
+Epoch 2, Train_loss 257.591240, Valid_loss 294.132660
+EarlyStopping counter: 1 out of 50
+Epoch 3, Train_loss 244.800266, Valid_loss 295.243500
+EarlyStopping counter: 2 out of 50
+Epoch 4, Train_loss 229.504970, Valid_loss 280.180481
+EarlyStopping counter: 3 out of 50
+Epoch 5, Train_loss 216.956117, Valid_loss 257.617096
+Epoch 6, Train_loss 202.183727, Valid_loss 238.297562
+Epoch 7, Train_loss 185.060040, Valid_loss 239.894821
+EarlyStopping counter: 1 out of 50
+Epoch 8, Train_loss 166.740392, Valid_loss 236.603317
+Epoch 9, Train_loss 149.707547, Valid_loss 216.774353
+Epoch 10, Train_loss 134.978025, Valid_loss 222.721909
+EarlyStopping counter: 1 out of 50
+Epoch 11, Train_loss 125.248180, Valid_loss 182.660126
+Epoch 12, Train_loss 115.331732, Valid_loss 206.041962
+EarlyStopping counter: 1 out of 50
+Epoch 13, Train_loss 108.744058, Valid_loss 178.360687
+Epoch 14, Train_loss 100.756283, Valid_loss 186.924774
+EarlyStopping counter: 1 out of 50
+Epoch 15, Train_loss 94.696343, Valid_loss 183.893707
+EarlyStopping counter: 2 out of 50
+Epoch 16, Train_loss 89.136120, Valid_loss 192.949265
+EarlyStopping counter: 3 out of 50
+Epoch 17, Train_loss 84.336461, Valid_loss 181.803452
+EarlyStopping counter: 4 out of 50
+Epoch 18, Train_loss 79.856690, Valid_loss 196.652313
+EarlyStopping counter: 5 out of 50
+Epoch 19, Train_loss 74.159200, Valid_loss 173.780182
+Epoch 20, Train_loss 69.496896, Valid_loss 184.733261
+EarlyStopping counter: 1 out of 50
+Epoch 21, Train_loss 64.827435, Valid_loss 183.630402
+EarlyStopping counter: 2 out of 50
+Epoch 22, Train_loss 61.422066, Valid_loss 183.594299
+EarlyStopping counter: 3 out of 50
+Epoch 23, Train_loss 58.026375, Valid_loss 172.461456
+Epoch 24, Train_loss 53.453129, Valid_loss 179.270935
+EarlyStopping counter: 1 out of 50
+Epoch 25, Train_loss 50.290176, Valid_loss 173.305466
+EarlyStopping counter: 2 out of 50
+Epoch 26, Train_loss 47.362288, Valid_loss 179.444534
+EarlyStopping counter: 3 out of 50
+Epoch 27, Train_loss 43.947025, Valid_loss 169.863281
+Epoch 28, Train_loss 41.579068, Valid_loss 161.568558
+Epoch 29, Train_loss 40.127506, Valid_loss 161.518204
+Epoch 30, Train_loss 37.999954, Valid_loss 159.282944
+Epoch 31, Train_loss 35.918131, Valid_loss 158.679382
+Epoch 32, Train_loss 35.116236, Valid_loss 154.001617
+Epoch 33, Train_loss 33.233930, Valid_loss 158.294693
+EarlyStopping counter: 1 out of 50
+Epoch 34, Train_loss 31.868409, Valid_loss 154.551971
+EarlyStopping counter: 2 out of 50
+Epoch 35, Train_loss 31.293777, Valid_loss 153.853867
+Epoch 36, Train_loss 30.430288, Valid_loss 148.816193
+Epoch 37, Train_loss 29.544749, Valid_loss 157.603348
+EarlyStopping counter: 1 out of 50
+Epoch 38, Train_loss 28.088190, Valid_loss 152.012344
+EarlyStopping counter: 2 out of 50
+Epoch 39, Train_loss 28.060295, Valid_loss 149.572067
+EarlyStopping counter: 3 out of 50
+Epoch 40, Train_loss 27.091167, Valid_loss 148.557846
+Epoch 41, Train_loss 26.291832, Valid_loss 152.890289
+EarlyStopping counter: 1 out of 50
+Epoch 42, Train_loss 25.598369, Valid_loss 145.962402
+Epoch 43, Train_loss 25.500742, Valid_loss 144.700256
+Epoch 44, Train_loss 25.448512, Valid_loss 149.732880
+EarlyStopping counter: 1 out of 50
+Epoch 45, Train_loss 24.843177, Valid_loss 153.330536
+EarlyStopping counter: 2 out of 50
+Epoch 46, Train_loss 23.882731, Valid_loss 146.193420
+EarlyStopping counter: 3 out of 50
+Epoch 47, Train_loss 23.863531, Valid_loss 145.911560
+EarlyStopping counter: 4 out of 50
+Epoch 48, Train_loss 22.815746, Valid_loss 144.898209
+EarlyStopping counter: 5 out of 50
+Epoch 49, Train_loss 23.033494, Valid_loss 146.024017
+EarlyStopping counter: 6 out of 50
+Epoch 50, Train_loss 22.709111, Valid_loss 142.930008
+Epoch 51, Train_loss 22.785622, Valid_loss 143.602737
+EarlyStopping counter: 1 out of 50
+Epoch 52, Train_loss 22.118046, Valid_loss 143.119827
+EarlyStopping counter: 2 out of 50
+Epoch 53, Train_loss 21.424271, Valid_loss 144.261307
+EarlyStopping counter: 3 out of 50
+Epoch 54, Train_loss 20.798259, Valid_loss 140.708557
+Epoch 55, Train_loss 21.012928, Valid_loss 143.230515
+EarlyStopping counter: 1 out of 50
+Epoch 56, Train_loss 20.907744, Valid_loss 141.127151
+EarlyStopping counter: 2 out of 50
+Epoch 57, Train_loss 20.784759, Valid_loss 141.802032
+EarlyStopping counter: 3 out of 50
+Epoch 58, Train_loss 20.773639, Valid_loss 143.221039
+EarlyStopping counter: 4 out of 50
+Epoch 59, Train_loss 20.255107, Valid_loss 140.152496
+Epoch 60, Train_loss 19.718490, Valid_loss 142.030380
+EarlyStopping counter: 1 out of 50
+Epoch 61, Train_loss 19.909086, Valid_loss 140.800873
+EarlyStopping counter: 2 out of 50
+Epoch 62, Train_loss 19.537783, Valid_loss 138.778763
+Epoch 63, Train_loss 19.297739, Valid_loss 138.558731
+Epoch 64, Train_loss 18.929149, Valid_loss 138.766006
+EarlyStopping counter: 1 out of 50
+Epoch 65, Train_loss 18.778266, Valid_loss 137.849930
+Epoch 66, Train_loss 18.807840, Valid_loss 138.712479
+EarlyStopping counter: 1 out of 50
+Epoch 67, Train_loss 18.414268, Valid_loss 137.904388
+EarlyStopping counter: 2 out of 50
+Epoch 68, Train_loss 18.184535, Valid_loss 138.962341
+EarlyStopping counter: 3 out of 50
+Epoch 69, Train_loss 18.394444, Valid_loss 137.435547
+Epoch 70, Train_loss 18.014162, Valid_loss 137.870895
+EarlyStopping counter: 1 out of 50
+Epoch 71, Train_loss 17.830249, Valid_loss 137.262680
+Epoch 72, Train_loss 18.104000, Valid_loss 140.491119
+EarlyStopping counter: 1 out of 50
+Epoch 73, Train_loss 17.563487, Valid_loss 135.195953
+Epoch 74, Train_loss 17.517212, Valid_loss 137.770737
+EarlyStopping counter: 1 out of 50
+Epoch 75, Train_loss 17.081739, Valid_loss 136.854507
+EarlyStopping counter: 2 out of 50
+Epoch 76, Train_loss 17.211142, Valid_loss 134.477448
+Epoch 77, Train_loss 17.155026, Valid_loss 135.152176
+EarlyStopping counter: 1 out of 50
+Epoch 78, Train_loss 16.984054, Valid_loss 137.622665
+EarlyStopping counter: 2 out of 50
+Epoch 79, Train_loss 16.848245, Valid_loss 135.375381
+EarlyStopping counter: 3 out of 50
+Epoch 80, Train_loss 16.413857, Valid_loss 134.799713
+EarlyStopping counter: 4 out of 50
+Epoch 81, Train_loss 16.537121, Valid_loss 134.085907
+Epoch 82, Train_loss 16.411203, Valid_loss 131.656891
+Epoch 83, Train_loss 16.396493, Valid_loss 133.352951
+EarlyStopping counter: 1 out of 50
+Epoch 84, Train_loss 16.090020, Valid_loss 135.621613
+EarlyStopping counter: 2 out of 50
+Epoch 85, Train_loss 16.140130, Valid_loss 131.175278
+Epoch 86, Train_loss 15.726626, Valid_loss 132.833252
+EarlyStopping counter: 1 out of 50
+Epoch 87, Train_loss 15.439207, Valid_loss 135.032562
+EarlyStopping counter: 2 out of 50
+Epoch 88, Train_loss 15.915325, Valid_loss 134.684494
+EarlyStopping counter: 3 out of 50
+Epoch 89, Train_loss 15.590774, Valid_loss 134.340500
+EarlyStopping counter: 4 out of 50
+Epoch 90, Train_loss 15.473757, Valid_loss 134.783218
+EarlyStopping counter: 5 out of 50
+Epoch 91, Train_loss 15.575063, Valid_loss 133.812943
+EarlyStopping counter: 6 out of 50
+Epoch 92, Train_loss 15.405342, Valid_loss 133.936829
+EarlyStopping counter: 7 out of 50
+Epoch 93, Train_loss 15.279325, Valid_loss 135.852097
+EarlyStopping counter: 8 out of 50
+Epoch 94, Train_loss 15.128741, Valid_loss 134.203491
+EarlyStopping counter: 9 out of 50
+Epoch 95, Train_loss 14.971139, Valid_loss 132.702194
+EarlyStopping counter: 10 out of 50
+Epoch 96, Train_loss 14.879975, Valid_loss 132.691223
+EarlyStopping counter: 11 out of 50
+Epoch 97, Train_loss 14.352392, Valid_loss 133.858368
+EarlyStopping counter: 12 out of 50
+Epoch 98, Train_loss 14.727338, Valid_loss 132.835281
+EarlyStopping counter: 13 out of 50
+Epoch 99, Train_loss 14.889526, Valid_loss 130.994186
+Epoch 100, Train_loss 14.320431, Valid_loss 131.634079
+EarlyStopping counter: 1 out of 50
+Epoch 101, Train_loss 14.674841, Valid_loss 131.901947
+EarlyStopping counter: 2 out of 50
+Epoch 102, Train_loss 14.358381, Valid_loss 133.108353
+EarlyStopping counter: 3 out of 50
+Epoch 103, Train_loss 14.343822, Valid_loss 133.274506
+EarlyStopping counter: 4 out of 50
+Epoch 104, Train_loss 14.338750, Valid_loss 132.477890
+EarlyStopping counter: 5 out of 50
+Epoch 105, Train_loss 14.393471, Valid_loss 133.931396
+EarlyStopping counter: 6 out of 50
+Epoch 106, Train_loss 14.256460, Valid_loss 133.357834
+EarlyStopping counter: 7 out of 50
+Epoch 107, Train_loss 13.836460, Valid_loss 135.326263
+EarlyStopping counter: 8 out of 50
+Epoch 108, Train_loss 13.992448, Valid_loss 132.763626
+EarlyStopping counter: 9 out of 50
+Epoch 109, Train_loss 14.014937, Valid_loss 132.271561
+EarlyStopping counter: 10 out of 50
+Epoch 110, Train_loss 13.784049, Valid_loss 132.456985
+EarlyStopping counter: 11 out of 50
+Epoch 111, Train_loss 13.785165, Valid_loss 132.906235
+EarlyStopping counter: 12 out of 50
+Epoch 112, Train_loss 13.798062, Valid_loss 132.589645
+EarlyStopping counter: 13 out of 50
+Epoch 113, Train_loss 13.710041, Valid_loss 134.055191
+EarlyStopping counter: 14 out of 50
+Epoch 114, Train_loss 13.430680, Valid_loss 132.618607
+EarlyStopping counter: 15 out of 50
+Epoch 115, Train_loss 13.430763, Valid_loss 130.650742
+Epoch 116, Train_loss 13.497178, Valid_loss 130.111465
+Epoch 117, Train_loss 13.369515, Valid_loss 128.383804
+Epoch 118, Train_loss 13.420414, Valid_loss 130.191879
+EarlyStopping counter: 1 out of 50
+Epoch 119, Train_loss 13.504494, Valid_loss 131.511215
+EarlyStopping counter: 2 out of 50
+Epoch 120, Train_loss 13.606707, Valid_loss 131.403152
+EarlyStopping counter: 3 out of 50
+Epoch 121, Train_loss 13.166379, Valid_loss 131.467972
+EarlyStopping counter: 4 out of 50
+Epoch 122, Train_loss 13.335900, Valid_loss 131.467346
+EarlyStopping counter: 5 out of 50
+Epoch 123, Train_loss 12.939965, Valid_loss 130.262360
+EarlyStopping counter: 6 out of 50
+Epoch 124, Train_loss 12.900134, Valid_loss 131.700226
+EarlyStopping counter: 7 out of 50
+Epoch 125, Train_loss 12.746102, Valid_loss 130.929047
+EarlyStopping counter: 8 out of 50
+Epoch 126, Train_loss 12.592039, Valid_loss 132.539108
+EarlyStopping counter: 9 out of 50
+Epoch 127, Train_loss 12.826141, Valid_loss 131.890091
+EarlyStopping counter: 10 out of 50
+Epoch 128, Train_loss 12.628340, Valid_loss 129.195709
+EarlyStopping counter: 11 out of 50
+Epoch 129, Train_loss 12.910197, Valid_loss 133.907288
+EarlyStopping counter: 12 out of 50
+Epoch 130, Train_loss 12.709105, Valid_loss 131.084747
+EarlyStopping counter: 13 out of 50
+Epoch 131, Train_loss 12.750725, Valid_loss 132.582153
+EarlyStopping counter: 14 out of 50
+Epoch 132, Train_loss 12.632156, Valid_loss 131.392914
+EarlyStopping counter: 15 out of 50
+Epoch 133, Train_loss 12.529467, Valid_loss 132.236969
+EarlyStopping counter: 16 out of 50
+Epoch 134, Train_loss 12.511410, Valid_loss 132.814148
+EarlyStopping counter: 17 out of 50
+Epoch 135, Train_loss 12.723895, Valid_loss 131.593155
+EarlyStopping counter: 18 out of 50
+Epoch 136, Train_loss 12.399834, Valid_loss 130.931564
+EarlyStopping counter: 19 out of 50
+Epoch 137, Train_loss 12.446708, Valid_loss 131.879944
+EarlyStopping counter: 20 out of 50
+Epoch 138, Train_loss 12.320693, Valid_loss 132.136810
+EarlyStopping counter: 21 out of 50
+Epoch 139, Train_loss 12.214617, Valid_loss 132.872589
+EarlyStopping counter: 22 out of 50
+Epoch 140, Train_loss 12.334411, Valid_loss 132.367096
+EarlyStopping counter: 23 out of 50
+Epoch 141, Train_loss 12.222652, Valid_loss 132.372421
+EarlyStopping counter: 24 out of 50
+Epoch 142, Train_loss 12.089515, Valid_loss 129.930389
+EarlyStopping counter: 25 out of 50
+Epoch 143, Train_loss 11.997334, Valid_loss 130.365494
+EarlyStopping counter: 26 out of 50
+Epoch 144, Train_loss 11.922465, Valid_loss 133.030746
+EarlyStopping counter: 27 out of 50
+Epoch 145, Train_loss 12.047945, Valid_loss 133.537674
+EarlyStopping counter: 28 out of 50
+Epoch 146, Train_loss 11.947991, Valid_loss 131.143295
+EarlyStopping counter: 29 out of 50
+Epoch 147, Train_loss 11.914613, Valid_loss 132.587677
+EarlyStopping counter: 30 out of 50
+Epoch 148, Train_loss 12.094794, Valid_loss 132.306900
+EarlyStopping counter: 31 out of 50
+Epoch 149, Train_loss 11.977731, Valid_loss 130.137283
+EarlyStopping counter: 32 out of 50
+Epoch 150, Train_loss 11.661030, Valid_loss 129.182098
+EarlyStopping counter: 33 out of 50
+Epoch 151, Train_loss 11.754043, Valid_loss 130.297714
+EarlyStopping counter: 34 out of 50
+Epoch 152, Train_loss 11.967832, Valid_loss 131.085281
+EarlyStopping counter: 35 out of 50
+Epoch 153, Train_loss 11.600342, Valid_loss 132.020889
+EarlyStopping counter: 36 out of 50
+Epoch 154, Train_loss 11.580838, Valid_loss 129.731064
+EarlyStopping counter: 37 out of 50
+Epoch 155, Train_loss 11.617573, Valid_loss 129.582520
+EarlyStopping counter: 38 out of 50
+Epoch 156, Train_loss 11.743773, Valid_loss 132.465561
+EarlyStopping counter: 39 out of 50
+Epoch 157, Train_loss 11.635852, Valid_loss 131.698990
+EarlyStopping counter: 40 out of 50
+Epoch 158, Train_loss 11.518438, Valid_loss 131.315842
+EarlyStopping counter: 41 out of 50
+Epoch 159, Train_loss 11.363278, Valid_loss 129.707809
+EarlyStopping counter: 42 out of 50
+Epoch 160, Train_loss 11.490189, Valid_loss 132.305603
+EarlyStopping counter: 43 out of 50
+Epoch 161, Train_loss 11.415627, Valid_loss 129.825256
+EarlyStopping counter: 44 out of 50
+Epoch 162, Train_loss 11.431520, Valid_loss 128.697311
+EarlyStopping counter: 45 out of 50
+Epoch 163, Train_loss 11.190980, Valid_loss 130.063980
+EarlyStopping counter: 46 out of 50
+Epoch 164, Train_loss 11.129461, Valid_loss 132.373917
+EarlyStopping counter: 47 out of 50
+Epoch 165, Train_loss 11.238701, Valid_loss 129.395309
+EarlyStopping counter: 48 out of 50
+Epoch 166, Train_loss 11.307353, Valid_loss 131.994492
+EarlyStopping counter: 49 out of 50
+Epoch 167, Train_loss 11.390373, Valid_loss 128.468658
+EarlyStopping counter: 50 out of 50
+EarlyStopping! Finish training!
+0_fold training is done! Training_time:270.79325763781867min
+Start testing ... 
+Train reslut: mse:18.0715 rmse:4.2511 mae:2.7051 r2:0.9514 pearson:0.9894 spearman:0.9904 
+Val reslut: mse:128.3838 rmse:11.3307 mae:8.1410 r2:0.6604 pearson:0.8141 spearman:0.7877
+All folds training is completed!
