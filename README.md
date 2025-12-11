@@ -1,2 +1,10 @@
 # DeepDrugs
-DeepDrugs, a mechanism-aware deep learning framework that employs a tri-linear attention network to directly characterize how two drugs jointly act within a specific cellular context to produce synergy.
+DeepDrugs is a mechanism-aware deep learning framework that employs a tri-linear attention network to directly characterize how two drugs jointly act within a specific cellular context to produce synergy.
+## 1 Description
+Accurate prediction of drug synergy is critical for the rational design of effective combination therapies against complex diseases such as cancer. However, existing computational approaches usually characterize the effect of an individual drug on a cell line separately and then merge the effect representations of two drugs for synergy prediction, which seriously limits their abilities to capture how two drugs act together within a specific cellular environment. We introduce DeepDrugs, a mechanism-aware deep learning framework that employs a tri-linear attention network to directly characterize how two drugs jointly act within a specific cellular context to produce synergy. Extensive experiments demonstrate that DeepDrugs outperforms state-of-the-art approaches in predictive accuracy, robustness, and generalization.
+## 2 Installation
+### 2.1 System requirements
+* GPU:A100
+* CUDA>11.6
+
+### 2.2 Software Dependencies
