@@ -5,7 +5,7 @@ Accurate prediction of drug synergy is critical for the rational design of effec
 ## 2 Installation
 ### 2.1 System requirements
 * GPU:A100
-* CUDA>11.6
+* CUDA>=11.6
 
 ### 2.2 Software Dependencies
 #### Create an environment and Install DeepDrugs dependencies
