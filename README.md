@@ -33,7 +33,9 @@ Other core dependencies:
 ## 3 Usage
 ### 3.1 Predict with Pretrained DeepDrugs Models
 Our pre-trained model for drug synergy prediction is available for download(https://zenodo.org/records/17888472). Please save it in the `save_model/`. 
+Simply run:
 ```
  $ python main.py --mode test --saved-model ./save_model/0_fold_oneil_best_model.pth > './experiment/'$(date +'%Y%m%d_%H%M').log 2>&1
  $ python main.py --mode test --saved-model ./save_model/0_fold_Drugcomb_best_model.pth > './experiment/'$(date +'%Y%m%d_%H%M').log 2>&1
 ```
+If you want to test your own samples, you need to preprocess the data accordingly. For details, please refer to DeepDrus-main/data/README.md.
