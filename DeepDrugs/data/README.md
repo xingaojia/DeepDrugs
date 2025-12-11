@@ -1,4 +1,5 @@
 # Data Preparation
+The DeepDrugs dataset can be obtained from the `data/` directory in https://zenodo.org/records/17888472
 ## 1 Dataset prepare
 To train or test on a new dataset, please prepare the input `.npy` file with the following format: [Drug A canonical SMILES, Drug B canonical SMILES, Cell line DepMap ID, Synergy score].  
 ## 2 Drug feature
