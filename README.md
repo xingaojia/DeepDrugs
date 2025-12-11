@@ -9,3 +9,24 @@ Accurate prediction of drug synergy is critical for the rational design of effec
 
 ### 2.2 Software Dependencies
 #### Create an environment and Install DeepDrugs dependencies
+We highly recommend to use a virtual environment for the installation of DeepDrugs and its dependencies. A virtual environment can be created and deactivated as follows by using conda(https://conda.io/docs/):
+```
+  # create
+  $ conda create -n deepdrugs python=3.9
+  # activate
+  $ conda activate deepdrugs
+```
+Install pytorch 1.13.1 (For more details, please refer to https://pytorch.org/)
+```
+ $ pip install torch==1.13.1+cu116 torchvision==0.14.1+cu116 torchaudio==0.13.1 --extra-index-url https://download.pytorch.org/whl/cu116
+```
+Install PyTorch Geometric (for CUDA 11.6):
+```
+  $ pip install torch-scatter torch-sparse torch-cluster torch-spline-conv -f https://data.pyg.org/whl/torch-1.13.1+cu116.html
+  $ pip install torch-geometric==2.6.1
+```
+Other core dependencies:
+```
+ $ pip install numpy==1.22.4 pandas==2.2.1 scikit-learn==1.6.1 rdkit==2025.3.3 mmcv-full==1.5.0 dgllife==0.3.2
+ $ pip install dgl-cu116 -f https://data.dgl.ai/wheels/repo.html
+```
