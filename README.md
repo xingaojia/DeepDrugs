@@ -30,3 +30,6 @@ Other core dependencies:
  $ pip install numpy==1.22.4 pandas==2.2.1 scikit-learn==1.6.1 rdkit==2025.3.3 mmcv-full==1.5.0 dgllife==0.3.2
  $ pip install dgl-cu116 -f https://data.dgl.ai/wheels/repo.html
 ```
+## 3 Usage
+### 3.1 Predict with Pretrained DeepDrugs Models
+Our pre-trained model for drug synergy prediction is available for download(https://zenodo.org/records/17888472). Please save it in the `saved_models/`. 
