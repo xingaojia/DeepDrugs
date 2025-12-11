@@ -44,3 +44,4 @@ To train DeepDrugs on your own dataset: First, process the data following the in
 ```
  $ python main.py --mode train > './experiment/'$(date +'%Y%m%d_%H%M').log 2>&1
 ```
+None: For the DrugComb dataset, the early stopping patience is set to 25； For the O’Neil dataset, the early stopping patience is set to 50.
