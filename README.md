@@ -8,3 +8,4 @@ Accurate prediction of drug synergy is critical for the rational design of effec
 * CUDA>11.6
 
 ### 2.2 Software Dependencies
+#### Create an environment and Install DeepDrugs dependencies
