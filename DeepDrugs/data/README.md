@@ -9,4 +9,4 @@ To train or test on a new dataset, please prepare the input `.npy` file with the
  $ python graphs.py
 ```
 ## 3 Cell line feature
-- Cell line features can be obtained from the `raw_data/cell/` directory, including gene expression, mutation, and copy number variation data.
+- Cell line features can be obtained from the `raw/cell/` directory, including gene expression, mutation, and copy number variation data.
