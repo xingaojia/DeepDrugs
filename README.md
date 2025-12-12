@@ -40,7 +40,7 @@ Simply run:
 ```
 If you want to test your own samples, you need to preprocess the data accordingly. For details, please refer to DeepDrus-main/data/README.md.
 ### 3.2 Train a New Model from Scratch
-To train DeepDrugs on your own dataset: First, process the data following the instructions in `DeepDrugs-main/data/README.md`. Once the data is prepared, you can proceed to run the code.
+To train DeepDrugs on your own dataset: First, process the data following the instructions in `DeepDrugs/data/README.md`. Once the data is prepared, you can proceed to run the code.
 ```
  $ python main.py --mode train > './experiment/'$(date +'%Y%m%d_%H%M').log 2>&1
 ```
