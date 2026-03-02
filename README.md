@@ -47,13 +47,14 @@ You can create a custom folder `data/user` under the `data/` directory and place
 2. **`cell_feature_1061genes.npy`**  
    - A dictionary mapping: `[DepMap_ID: feature_matrix]`  
    - Save this file in: `data/user/`
-
-If you want to test the pre-trained model on the DrugComb or O'Neil dataset, please modify the relevant data import sections in `utlis.py` and `models/model.py`. The specific file names and paths can be found in the `data/` directory.
-Simply run:
+4. Before prediction, modify the relevant data import sections in `utils.py` and `models/model.py` to match your file paths and names.
+Once the above steps are completed, run the following commands to predict:
 ```
- $ python main.py --mode test --saved-model ./save_model/0_fold_oneil_best_model.pth > './experiment/'$(date +'%Y%m%d_%H%M').log 2>&1
  $ python main.py --mode test --saved-model ./save_model/0_fold_Drugcomb_best_model.pth > './experiment/'$(date +'%Y%m%d_%H%M').log 2>&1
 ```
+
+
+
 If you want to test your own samples, you need to preprocess the data accordingly. For details, please refer to DeepDrus-main/data/README.md.
 ### 3.2 Train a New Model from Scratch
 To train DeepDrugs on your own dataset: First, process the data following the instructions in `DeepDrugs/data/README.md`. Once the data is prepared, you can proceed to run the code.
