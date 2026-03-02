@@ -32,7 +32,11 @@ Other core dependencies:
 ```
 ## 3 Usage
 ### 3.1 Predict with Pretrained DeepDrugs Models
-Our pre-trained model for drug synergy prediction is available for download(https://zenodo.org/records/17888472). Please save it in the `save_model/`. If you want to test the pre-trained model on the DrugComb or O'Neil dataset, please modify the relevant data import sections in `utlis.py` and `models/model.py`. The specific file names and paths can be found in the `data/` directory.
+Our pre-trained model for drug synergy prediction is available for download(https://zenodo.org/records/17888472). Please save it in the `save_model/`directory.
+1. For the data you want to test, obtain the canonical SMILES strings for the drugs from the ChEMBL database and standardize them using RDKit. Obtain the corresponding DepMap IDs for the cell lines from the DepMap database. Save your data in the following format as a `npy` file named `0_fold_test_{user}.npy`:
+2. 
+
+If you want to test the pre-trained model on the DrugComb or O'Neil dataset, please modify the relevant data import sections in `utlis.py` and `models/model.py`. The specific file names and paths can be found in the `data/` directory.
 Simply run:
 ```
  $ python main.py --mode test --saved-model ./save_model/0_fold_oneil_best_model.pth > './experiment/'$(date +'%Y%m%d_%H%M').log 2>&1
