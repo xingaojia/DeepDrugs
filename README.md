@@ -52,13 +52,15 @@ Once the above steps are completed, run the following commands to predict:
 ```
  $ python main.py --mode test --saved-model ./save_model/0_fold_Drugcomb_best_model.pth > './experiment/'$(date +'%Y%m%d_%H%M').log 2>&1
 ```
-
-
-
-If you want to test your own samples, you need to preprocess the data accordingly. For details, please refer to DeepDrus-main/data/README.md.
+After running the prediction, the model will generate a file named: `pred_vs_true_synergy_score.csv`.This file contains the predicted synergy scores along with the true values for your test dataset.
 ### 3.2 Train a New Model from Scratch
-To train DeepDrugs on your own dataset: First, process the data following the instructions in `DeepDrugs/data/README.md`. Once the data is prepared, you can proceed to run the code.
-```
- $ python main.py --mode train > './experiment/'$(date +'%Y%m%d_%H%M').log 2>&1
-```
-None: For the DrugComb dataset, the early stopping patience is set to 25； For the O’Neil dataset, the early stopping patience is set to 50.
+If you want to train your own DeepDrugs model, you also need to process your dataset following the same steps described above for prediction. Specifically:
+1. Prepare your dataset and split it into **training, validation, and test sets**.  
+   - Save each set in your own directory (e.g., `data/user/`) in the required `.npy` format.
+2. If your dataset is **large**, we recommend setting **early stopping patience = 25** during training.  
+   If your dataset is **small**, you can set **early stopping patience = 50** to ensure sufficient training.
+
+Once your data is ready, run the training command:
+
+```bash
+$ python main.py --mode train > './experiment/'$(date +'%Y%m%d_%H%M').log 2>&1
