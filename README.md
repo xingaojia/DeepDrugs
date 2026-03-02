@@ -34,7 +34,19 @@ Other core dependencies:
 ### 3.1 Predict with Pretrained DeepDrugs Models
 Our pre-trained model for drug synergy prediction is available for download(https://zenodo.org/records/17888472). Please save it in the `save_model/`directory.
 1. For the data you want to test, obtain the canonical SMILES strings for the drugs from the ChEMBL database and standardize them using RDKit. Obtain the corresponding DepMap IDs for the cell lines from the DepMap database. Save your data in the following format as a `npy` file named `0_fold_test_{user}.npy`:
-2. 
+```
+ [drug_A_canonical_smi, drug_B_canonical_smi, DepMap_ID, synergy_score]
+```
+You can create a custom folder `data/user` under the `data/` directory and place your `.npy` file there.
+(Since you want to predict synergy scores, the `synergy_score` values in the file can be set to 0.)
+2. We provide `data/0_drug_data/graphs.py` for generating molecular graphs, and `data/raw_data/gene1061.txt` to help select multi-omics data for the 1061 genes.
+3. You also need to prepare the following files for your custom dataset:
+1. **`drug_smiles.npy`**  
+   - A dictionary mapping: `[drug_canonical_smi: drug_canonical_smi]`  
+   - Save this file in: `data/user/`
+2. **`cell_feature_1061genes.npy`**  
+   - A dictionary mapping: `[DepMap_ID: feature_matrix]`  
+   - Save this file in: `data/user/`
 
 If you want to test the pre-trained model on the DrugComb or O'Neil dataset, please modify the relevant data import sections in `utlis.py` and `models/model.py`. The specific file names and paths can be found in the `data/` directory.
 Simply run:
