@@ -39,6 +39,7 @@ Our pre-trained model for drug synergy prediction is available for download((htt
 ```
 You can create a custom folder `data/user` under the `data/` directory and place your `.npy` file there.
 (Since you want to predict synergy scores, the `synergy_score` values in the file can be set to 0.)
+
 2. We provide `data/0_drug_data/graphs.py` for generating molecular graphs, and `data/raw_data/gene1061.txt` to help select multi-omics data for the 1061 genes.
 3. You also need to prepare the following files for your custom dataset:
 1. **`drug_smiles.npy`**  
