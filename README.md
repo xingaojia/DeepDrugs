@@ -42,10 +42,10 @@ You can create a custom folder `data/user` under the `data/` directory and place
 
 2. We provide `data/0_drug_data/graphs.py` for generating molecular graphs, and `data/raw_data/gene1061.txt` to help select multi-omics data for the 1061 genes.
 3. You also need to prepare the following files for your custom dataset:
-  **`drug_smiles.npy`**  
+  (1)**`drug_smiles.npy`**  
    - A dictionary mapping: `[drug_canonical_smi: drug_canonical_smi]`  
    - Save this file in: `data/user/`
-  **`cell_feature_1061genes.npy`**  
+  (2)**`cell_feature_1061genes.npy`**  
    - A dictionary mapping: `[DepMap_ID: feature_matrix]`  
    - Save this file in: `data/user/`
 4. Before prediction, modify the relevant data import sections in `utils.py` and `models/model.py` to match your file paths and names.
