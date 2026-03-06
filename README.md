@@ -59,7 +59,7 @@ After running the prediction, the model will generate a file named: `pred_vs_tru
 ### 3.2 Train a New Model from Scratch
 If you want to train your own DeepDrugs model, you also need to process your dataset following the same steps described above for prediction. Specifically:
 1. Prepare your dataset and split it into **training, validation, and test sets**.  
-   - Save each set in your own directory (e.g., `data/user/`) in the required `.npy` format.
+   Save each set in your own directory (e.g., `data/user/`) in the required `.npy` format.
 2. If your dataset is **large**, we recommend setting **early stopping patience = 25** during training.  
    If your dataset is **small**, you can set **early stopping patience = 50** to ensure sufficient training.
 
